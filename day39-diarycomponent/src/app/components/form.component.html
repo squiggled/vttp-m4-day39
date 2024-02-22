@@ -1,0 +1,27 @@
+<h2>muh diary</h2>
+<div>
+    <form [formGroup]="form" (submit)="process()">
+        <table>
+            <tr>
+                <td>Date: </td>
+                <td><input type="date" formControlName="date"> </td>
+            </tr>
+            <tr>
+                <td>Entry: </td>
+                <td><input type="text" formControlName="entry"> </td>
+            </tr>
+            <tr>
+                <td>Type: </td>
+                <input type="radio" value="travel" formControlName="type"> Travel
+                <input type="radio" value="climbing" formControlName="type"> Climbing
+                <input type="radio" value="eating" formControlName="type"> Eating
+                <input type="radio" value="hobbies" formControlName="type"> Hobbies
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit">Add</button></td>
+            </tr>
+        </table>
+    </form>
+    
+</div>

@@ -1,0 +1,22 @@
+<h2>muh entries</h2>
+<div *ngIf="entries$ | async as entries">
+<table *ngIf="entries.length > 0; else noEntries">
+    <tr>
+        <td>Date</td>
+        <td>Entry</td>
+        <td>Type</td>
+        <td>Delete</td>
+    </tr>
+    <tr *ngFor = "let entry of entries">
+        <td>{{entry.date}}</td>
+        <td>{{entry.entry}}</td>
+        <td>{{entry.type}}</td>
+    </tr>
+</table>
+<div >
+    
+    
+</div>
+<ng-template #noEntries>
+    <h2>u have no entries</h2>
+</ng-template>
