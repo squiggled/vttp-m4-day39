@@ -1,0 +1,25 @@
+<div>
+    <form [formGroup]="form" (submit)="process()">
+        <table>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" formControlName="user"></td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td><textarea type="text" formControlName="description"></textarea></td>
+            </tr>
+            <tr>
+                <td>Image</td>
+                <td><input type="file" accept="image/*" #file></td>
+            </tr>
+            <button type="submit">Submit</button>
+        </table>
+    </form>
+    <div *ngIf="urlObs$ | async as url; else noImage">
+        <img [src]="url">
+    </div>
+    <ng-template #noImage>
+        <h2>loading</h2>
+    </ng-template>
+</div>
