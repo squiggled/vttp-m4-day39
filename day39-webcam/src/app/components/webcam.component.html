@@ -1,0 +1,5 @@
+<webcam [trigger]="triggerObs$" (imageCapture)="imageCapture($event)"></webcam>
+<!--webcam component takes in input called trigger, which we assign to an obs-->
+<!--wit outputs an event called image capture, which we hand off the component to handle-->
+<button type="button" (click)="snap()">Snap!!!! </button>
+<img *ngIf="webcamImageDataUrl" [src]="webcamImageDataUrl" />
