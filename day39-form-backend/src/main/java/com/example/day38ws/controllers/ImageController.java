@@ -33,7 +33,7 @@ import jakarta.json.JsonObject;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
-@CrossOrigin
+// @CrossOrigin
 public class ImageController {
     @Autowired
     S3Repository s3Repo;

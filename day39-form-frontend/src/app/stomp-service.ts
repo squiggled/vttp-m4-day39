@@ -22,7 +22,7 @@ export class StompService {
         // console.log("user value: ", formData);
         //what u send is a json
         formData.set('file', imageFile.nativeElement.files[0]);
-        firstValueFrom(this.client.post<any>('http://localhost:8080/stomp', formData))
+        firstValueFrom(this.client.post<any>('/stomp', formData))
         .then(response => {this.url=response.url; console.log("url in service ",this.url)})
         .then(response=>{this.urlSubject.next(this.url)})
         .catch(error => {console.log("error displaying image");
