@@ -19,7 +19,8 @@ import jakarta.json.JsonReader;
 public class RedisRepo {
     @Autowired
     @Qualifier("myredis")
-    RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
+    // RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
+    RedisTemplate<String, Object> redisTemplate;
 
     public void storeSearch(List<SearchResult> results){
         for (SearchResult result : results){
