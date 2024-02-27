@@ -1,0 +1,1 @@
+export GIPHY_KEY="9PeqpmULdoNCZgK28gYLlJZUcTKBWDYf"

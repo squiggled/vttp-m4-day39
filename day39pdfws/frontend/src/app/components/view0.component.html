@@ -1,0 +1,13 @@
+<h2>search</h2>
+<form [formGroup]="form" (submit)="process()">
+    <table>
+        <tr>
+            <td>Search: </td>
+            <td><input type="text" formControlName="search"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">Search GIFs</button></td>
+        </tr>
+    </table>
+</form>

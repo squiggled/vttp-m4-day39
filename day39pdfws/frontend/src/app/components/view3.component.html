@@ -1,0 +1,7 @@
+<h2>Comment</h2>
+<form [formGroup]="commentForm" (submit)="addComment()">
+    <textarea formControlName="comment"></textarea>
+    <button type="submit">Post</button>
+    <button type="button">Back</button>
+</form>
+

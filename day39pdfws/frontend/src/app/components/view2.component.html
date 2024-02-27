@@ -1,0 +1,29 @@
+<div>
+    <h2>GIF details</h2>
+    <div *ngIf=" gifDeets$ | async as gif; else noResults">
+        <img src="{{gif.url}}">
+        <p>{{gif.name}}</p>
+    </div>
+    <div *ngIf="commentsObs$ | async as comments; else noComments">
+        <div *ngFor="let comment of comments">
+            <p>{{comment.comment}}</p> 
+            <p>{{comment.timestamp}}</p>
+        </div>
+        <div *ngIf="comments.length==0">
+            <p>empty</p>
+        </div>
+    </div>
+    <div>
+        <button type="button" (click)="addComment()">Add a comment</button>
+    </div>
+    <ng-template #noResults>
+        <p>loading gif details</p>
+    </ng-template>
+    <ng-template #noComments>
+        <p>no comments yet</p>
+    </ng-template>
+    
+</div>
+
+
+

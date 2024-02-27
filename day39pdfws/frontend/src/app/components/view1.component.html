@@ -1,0 +1,13 @@
+<div *ngIf=" searchObs$ | async as searchArray; else noResults">
+    <div *ngFor="let gif of searchArray" [routerLink]="['/details', gif.id]">
+        <img src="{{gif.url}}">
+        <p>{{gif.name}}</p>
+
+    </div>
+    <div>
+        <button type="button" (click)="loadLess()">Previous</button> <button type="button" (click)="loadMore()">Next</button>
+    </div>
+</div>
+<ng-template #noResults>
+    <div><h2>Loading...</h2></div>
+</ng-template>
